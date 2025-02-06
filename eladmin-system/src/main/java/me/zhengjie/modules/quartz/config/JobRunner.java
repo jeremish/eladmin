@@ -47,5 +47,6 @@ public class JobRunner implements ApplicationRunner {
         List<QuartzJob> quartzJobs = quartzJobRepository.findByIsPauseIsFalse();
         quartzJobs.forEach(quartzManage::addJob);
         log.info("Timing task injection complete");
+
     }
 }
